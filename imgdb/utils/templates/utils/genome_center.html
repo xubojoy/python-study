@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load i18n bootstrap3 %}
+
+{% block title %}Genome Center - {% if user.real_name %}{{ user.real_name }}{% else %}{{ user.username }}{% endif %}{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+      <div class="col-md-3 module-card">
+          <div class="thumbnail">
+              <img alt="Upload Genome" src="/static/logo/genome.png" />
+              <div class="caption">
+                  <h3>Upload Genome</h3>
+                  <p></p>
+                  <p><a data-placement="bottom" data-toggle="tooltip" title="" class="btn btn-primary" href="{% url 'genome-upload' %}">Upload Genome &gt;&gt;</a></p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3 module-card">
+          <div class="thumbnail">
+              <img alt="Browse" src="/static/logo/genome.png" />
+              <div class="caption">
+                  <h3>Browse</h3>
+                  <p>browse public genomes, private genomes</p>
+                  <p><a data-placement="bottom" data-toggle="tooltip" title="Public genomes, private genomes browser" class="btn btn-primary" href="{% url 'genome-browser' %}">Browse &gt;&gt;</a></p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3 module-card">
+          <div class="thumbnail">
+              <img alt="Compare" src="/static/logo/genome.png" />
+              <div class="caption">
+                  <h3>Compare</h3>
+                  <p></p>
+                  <p><a data-placement="bottom" data-toggle="tooltip" title="" class="btn btn-primary" href="#">Compare &gt;&gt;</a></p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3 module-card">
+          <div class="thumbnail">
+              <img alt="Phylogenetic Tree" src="/static/logo/genome.png" />
+              <div class="caption">
+                  <h3>Phylogenetic Tree</h3>
+                  <p></p>
+                  <p><a data-placement="bottom" data-toggle="tooltip" title="" class="btn btn-primary" href="#">Phylogenetic Tree &gt;&gt;</a></p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3 module-card">
+          <div class="thumbnail">
+              <img alt="More" src="/static/logo/genome.png" />
+              <div class="caption">
+                  <h3>More</h3>
+                  <p></p>
+                  <p><a data-placement="bottom" data-toggle="tooltip" title="" class="btn btn-primary" href="#">More &gt;&gt;</a></p>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
